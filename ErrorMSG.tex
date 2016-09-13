@@ -1,0 +1,16 @@
+\subsubsection{Temperaturfehler}
+
+Der 3D Drucker besitzt einige Maßnahmen gegen Überhitzung oder anderweitige Fehler der Temperatursteuerung. Sollte ein Fehler auftreten wird der momentane Druck sofort gestoppt, die Fehlermeldung ist auf dem LCD-Display des Druckers, sowie im OctoPrint Webinterface erkennbar.\\ \\
+Folgende Fehler können hierbei auftreten:
+
+\begin{itemize}
+\item \textbf{Heating failed!} \\
+		Dieser Fehler ist der häufigste. Er tritt auf wenn der Drucker das Heizbett oder den Extruder nicht innerhalb eines gewissen Zeitrahmens auf die gewünschte Temperatur bringen kann. Um einem technischem Problem vor zu beugen (wie z.~B. einem nicht korrekt verbundenen Temperatursensor) wird dieser Fehler geworfen.
+\item \textbf{Extruder 0 MAXTEMP triggered!} \\ 
+		Der Extruder wurde zu heiß, bzw. die Temperatur wurde fälschlich als zu heiß gemessen.
+\item \textbf{Extruder 0 MINTEMP triggered!} \\
+		Der Sensor des Extruders hat einen unglaubwürdig kleinen Wert zurück geliefert. Dies bedeutet dass der Sensor defekt ist oder nicht mehr richtig verbunden ist.
+\end{itemize}
+
+Bei \emph{jedem} dieser Fehler sollte der Drucker umgänglichst ausgeschaltet werden, und von passendem Personal untersucht werden lassen.
+Im schlimmsten Fall können Temperaturfehler zum Brand führen!!!
