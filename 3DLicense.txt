@@ -1,0 +1,21 @@
+Benötigte Eigenschaften für den Führerschein:
+  - Muss das Handbuch gelesen haben.
+  - Muss die möglichen häufigen Fehlerquellen kennen, bzw. wissen wie man in Problemsituationen reagiert.
+  - Muss Verantwortungsbewusst sein, d.h. muss alt genug (> KL. 8?) sein.
+  - Muss wissen wie man eventuell Personal ansprechen kann.
+
+Man darf NICHT:
+  - Filament wechseln.
+  - Mit einem Material anders als dem Standard-Material drucken (PLA oder NGen?)
+  - Anderweitige mechanische Änderungen am Drucker durchführen.
+
+
+Wenn man den Führerschein hat, erhält man: 
+  - Persönlicher OctoPrint-Account zum steuern
+  - Eine Karte (Warum nicht :D) - Evtl mit Nummer drauf? 
+
+
+
+Gedanken:
+  - Sollte das System doch nicht evtl. über Lehrer und/oder Ansprechpersonen laufen? (Filamentkosten etc.)
+  - Was sollten die Schüler drucken dürfen?
