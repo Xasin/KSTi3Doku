@@ -127,3 +127,41 @@ Nun sollte das Endergebnis so aus sehen:\\
 \includegraphics[clip=true, trim= 0 0 30 0, height=0.55\linewidth]{Bilder/Z_Assembly_6.png} & 
 \includegraphics[clip=true, trim= 200 0 150 0, height=0.55\linewidth]{Bilder/XYZ_Merge_1.jpg} \\
 \end{tabular}
+
+\subsubsection{Anbringen der Elektronik}
+Da nun das gesamte Gestell fertig zusammen gebaut ist, können nun die weiteren Komponenten, so wie z.B. das beheizte Druckbett (Heatbed) oder die Endschalter (Endstops) angebracht werden.
+
+\paragraph{Das Heatbed} kann mithilfe der mit gelieferten M3 Schrauben, sowie den vier Federn, auf dem Y-Achsen-Schlitten angebracht werden. In der Web-Anleitung muss das Heatbed vorher noch verkabelt werden, dies war jedoch für den Schul-Drucker nicht nötig. Ist das Heizbett nun fertig angebracht, so kann die beiliegende Glasplatte mithilfe der Klemmen auf dem Heatbed befestigt werden. Das Endergebnis sollte folgendermaßen aus sehen:\\
+\includegraphics[width=\textwidth]{Bilder/Assembled_BED.jpg}
+
+
+\paragraph{Endstops:} Nachdem das Bett sicher angebracht ist, können nun die Endstops an der X- Y- und Z-Achse angebracht werden. Sie dienen dazu, dem Drucker seine Position zu identifizieren, und sind damit essentiell für die zuverlässige Funktionalität dessen. Die drei Endstops können wie folgt angebracht werden:\\
+\begin{tabular}{ccc}
+\includegraphics[clip=true, trim=150 80 150 80, width=0.3\textwidth]{Bilder/Endstop_X.png} & 
+\includegraphics[clip=true, trim=165 80 135 78, width=0.3\textwidth]{Bilder/Endstop_Y.png} & 
+\includegraphics[clip=true, trim=120 60 140 58, width=0.3\textwidth]{Bilder/Endstop_Z.png} \\ 
+\end{tabular} 
+
+\paragraph{Das LC-Display} kann nun mit den übrig gebliebenen Teilen fixiert werden. Ob man es hierbei am Frame des Druckers an bringt, oder eventuell eine Halterung dafür druckt und es vor/neben den Drucker stellt ist dem Nutzer überlassen. Am Schuldrucker wurde das LC-Display am Frame folgendermaßen angebracht:\\
+\includegraphics[width=\textwidth]{Bilder/LCD.png}
+
+\paragraph{Die PSU} kann an der (von Vorne) rechten Seite des Frames angebracht werden. Hierfür werden nur einige Schrauben benötigt. Vor dem Einbau sollte darauf geachtet werden, dass die Spannungseinstellung der PSU auf 220V (bzw. 110V falls nötig) eingestellt ist. Falsche Einstellung wird zu Schaden führen! Auch bei der Verkabelung selbst sollte Wert darauf gelegt werden, die einzelnen Kabel korrekt an zu schließen, da ansonsten das Gerät nicht ordnungsgemäß funktionieren wird! 
+
+Die Kabel sollten dabei so aussehen:\\
+\begin{tabular}{cc}
+\includegraphics[width=0.5\textwidth]{Bilder/Power_1.jpg} &
+\includegraphics[clip=true, trim=140 0 100 0, width=0.5\textwidth]{Bilder/Power_2.jpg} \\
+\end{tabular}
+
+\paragraph{Die Elektronik} kann nun als letztes angebracht werden. Hierfür werden einige Schrauben benötigt, mit denen der PCB an der linken Seite (gegenüber der PSU) angebracht werden kann.\\
+\includegraphics[width=\textwidth]{Bilder/Tutorial/IMG_20161101_143146715.jpg}\\
+
+Nun können die einzelnen Elemente wie Heatbed, Extruder, Motoren und Sensoren am Board angeschlossen werden. Hierbei sollte man eine Board-Spezifische Anleitung befolgen. Für das GT2560, welches in diesem Drucker verwendet wird, sah dies so aus:\\
+\includegraphics[width=\textwidth]{Bilder/Electronics_2.jpg}
+
+\newpage
+\subsubsection{Fertigstellung}
+Nachdem alle Kabel verlegt, alle Schrauben gefestigt wurden, und der Drucker auf Funktionalität überprüft ist (durch anstellen und Bewegen einiger Motoren etc.), sollte das Endergebnis folgendermaßen aus sehen:\\
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Bilder/Tutorial/IMG_20161101_143059461.jpg}
+\end{center}
