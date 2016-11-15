@@ -15,4 +15,4 @@ module visual_assembly() {
 	}
 }
 
-standTube_cup();
+LightClip();
