@@ -6,7 +6,14 @@ Der Drucker besteht aus folgenden wichtigen Bausteinen:
 Der Schuldrucker ist ein GeeeTech Prusa i3 mit 8mm Acryl-Frame, gekauft von der GeeeTech e-Bay Website.
 
 \paragraph{Motoren:} 
-Die verbauten Schrittmotoren sind generische NEMA-17 Bipolar-Schrittmotoren. Getrieben werden sie von einem Pololu A4988 Schrittmotortreiber bzw. kompatibel.
+Die verbauten Schrittmotoren sind generische NEMA-17 Bipolar-Schrittmotoren. Getrieben werden sie von einem Pololu A4988 Schrittmotortreiber mit 1/16 Microstepping.
+
+Folgende Steps/MM-Werte liegen vor:
+\begin{itemize}[noitemsep]
+\item X/Y: 80
+\item Z:   2560
+\item E:   93
+\end{itemize}
 
 \paragraph{Steuerelektronik:}
 Die momentane Elektronik ist das GeeeTech GT2560. Die Schaltkreise basieren auf den Standard Ultimaker-Controllern, und sind Firmware-Compatibel mit diesen.
@@ -15,25 +22,26 @@ Zusätzlich wurde für eine problemlose Ansteuerung des Heizbettes ein selbst-ge
 Dieser besteht aus einem Hoch-Strom MOSFET für Ströme bis zu 20A, mit geeigneter Kühlung und Schaltelektronik.
 
 \paragraph{Firmware:}
-Die Firmware der Elektronik ist (momentan) Marlin, jedoch kann diese theoretisch jederzeit auf eine andere RAMPS-Kompatible Version geändert werden! (So z.B. Repetier)
+Die Firmware der Elektronik ist (momentan) Marlin 1.0.2, jedoch kann diese theoretisch jederzeit auf eine andere RAMPS-Kompatible Version geändert werden! (So z.B. Repetier)
 
 \paragraph{Stromversorgung:}
 Die Stromversorgung des Druckers besteht aus einem generischen 12V 20A Netzteil.
 
 \paragraph{Extruder:}
-Der Extruder ist momentan ein Direct-Drive Extruder (d.h. ohne Zahnradsystem), Allmetal (d.h. ohne Plastik-Bauteile, somit mit einer Maximaltemperatur von 300°C)
+Der Extruder ist momentan ein Direct-Drive Extruder (d.h. ohne Zahnradsystem), PTFE-Lined, somit max. Temperatur 270°C (empfohlen jedoch <240°C!!!)
 \begin{labeling}{Heizelement:}
 \item[Thermistor:] Der Thermistor (Temperatursensor) ist ein EPCOS B57560G1104F, ausgelegt für Temperaturen bis 300°C
 \item[Heizelement:] Das Heizelement ist eine 30W 12V Standard-Heizpatrone (6x20mm Größe)
-\item[Düse:] Die Düse ist eine Stainless-Steel (kratzfeste) 0.3mm/0.4mm Düse (austauschbar), geeignet zum Druck von exotischen und abrasiven Materialien
+\item[Düse:] Die Düse ist eine Stainless-Steel (kratzfeste) 0.4mm Düse (austauschbar), geeignet zum Druck von exotischen und abrasiven Materialien
 \end{labeling}
 
 \subsubsection{Maximalwerte}
 Der Drucker unterliegt beim Drucken folgenden Limitationen:
 
 \begin{labeling}{Geschwindigkeit:}
-\item[Temperatur:] Die Temperatur darf 300°C nicht überschreiten. Das Heizbett kann max. circa 110°C erreichen.
-\item[Geschwindigkeit:] Die Z-Achse kann max. 4mm/s schnell sein; X und Y-Achsen können sich mit max. 180mm/s bewegen.
-\item[Extrusion:] Der Extruder sollte nicht mehr als 4mm³/s Extrudieren müssen.
+\item[Temperatur:] Die Temperatur darf 270°C nicht überschreiten. Das Heizbett kann max. circa 110°C erreichen.
+\item[Geschwindigkeit:] Die Z-Achse kann max. 4mm/s schnell sein. 
+X und Y-Achsen können sich mit max. 180mm/s bewegen.
+\item[Extrusion:] Der Extruder sollte nicht mehr als 4mm$^3$/s Extrudieren müssen.
 \item[Druckfläche:] Die Druckfläche des Druckers liegt bei ca. 18x18x18cm
 \end{labeling}

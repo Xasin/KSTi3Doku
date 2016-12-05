@@ -1,4 +1,4 @@
-Das OctoPrint-Webinterface ist das Kontrollinterface des Druckers. Sofern man mit dem gleichen Netzwerk verbunden ist, sollte es über "`octopi.local"', bzw. der IP des RaspberryPi, im Browser-Fenster erreichbar sein. Mit ihm lassen sich Drucke starten und stoppen, sowie deren Fortschritt überwachen etc.
+Das OctoPrint-Webinterface ist das Kontrollinterface des Druckers. Sofern man mit dem gleichen Netzwerk verbunden ist, sollte es über "`octopi.local"', bzw. der IP des RaspberryPi (192.168.5.180), im Browser-Fenster erreichbar sein. Mit ihm lassen sich Drucke starten und stoppen, sowie deren Fortschritt überwachen etc.
 
 \subsubsection{Starten eines Druckes}
 Um über das Webinterface einen Druck an zu fangen, gibt es zwei Möglichkeiten:
@@ -23,12 +23,27 @@ Zum Starten des Druckes eines 3D-Modells muss folgendes getan werden:
 In diesem Fenster müssen nun folgende Parameter angepasst werden:
 \begin{itemize}[noitemsep]
 \item Das Slicingprofil muss korrekt ausgewählt werden, d.h. es muss das richtige Material (meist PLA!), sowie die gewünschte Qualität ausgewählt werden.
-\item Das Druckerprofil muss auf "`Normal 0.3"' gesetzt werden, sofern dies nicht der Fall ist!
+\item Das Druckerprofil muss auf "`Normal 0.4"' gesetzt werden, sofern dies nicht der Fall ist!
 \item "`Nach dem Slicing"' sollte auf "`Drucken"' gesetzt werden.
 \end{itemize}
 Nun kann auf "`OK"' gedrückt werden. Das Modell sollte nun vom RaspberryPi verarbeitet werden, und der Druck sollte starten.
 
 
-\paragraph{Druckstart:} Nachdem nun das Modell geladen und vorbereitet wurde, wird der Drucker sofort mit dem Druck an fangen. Hierfür ist es sehr wichtig zumindest die erste Schicht gut im Auge zu behalten! Oftmals schlägt ein Druck wegen eben jener ersten Schicht fehl, es ist dementsprechend unabdingbar dass dafür gesorgt wird dass diese gut sitzt! Sollte der Druck hier fehl schlagen, so muss Abgebrochen und neu gestartet werden (siehe \textbf{LINK EINFÜGEN}). 
+\paragraph{Druckstart:} Nachdem nun das Modell geladen und vorbereitet wurde, wird der Drucker sofort mit dem Druck an fangen. Hierfür ist es sehr wichtig zumindest die erste Schicht gut im Auge zu behalten! Oftmals schlägt ein Druck wegen eben jener ersten Schicht fehl, es ist dementsprechend unabdingbar dass dafür gesorgt wird dass diese gut sitzt! Sollte der Druck hier fehl schlagen, so muss Abgebrochen und neu gestartet werden (siehe \ref{ABORTING}, S.\pageref{ABORTING}). 
 
 Auch ist während des Druckens selbst regelmäßig ein Auge auf den Prozess zu halten - es kann jederzeit einen Fehler geben, der den Druck fehl schlagen lässt oder ernsthafte Probleme verursachen kann, \emph{ohne dass die Maschine dies bemerken kann.} Empfehlenswert ist eine Überprüfung des Druckes alle 15 bis 30 Minuten; dies kann über den "`Steuerung"'-Tab im OctoPrint Fenster erledigt werden, welcher einen Webcam-Livestream an zeigt.
+
+\subsubsection{Abbruch eines Druckes}
+\label{ABORTING}
+Das Abbrechen eines Druckes ist dank des OctoPrint Web-Interface eine schnelle Möglichkeit, den Drucker komplett zu stoppen, sollte dies nötig sein. Hierfür kann der sich auf der linken Seite befindliche Knopf "`Abbruch"' gedrückt werden. Der Drucker sollte kurz darauf in seine Ruhelage fahren und abschalten.
+
+Das Nutzen dieser Funktion sollte immer dann in Betracht gezogen werden, wenn:
+\begin{itemize}[noitemsep]
+\item Das Bauteil sich von der Druckplatte gelöst hat
+\item Der Drucker eventuell einen technischen Fehler auf weist (z.B. instabile Temperaturhaltung)
+\item Der Druck aus jeglichen anderen Gründen nicht mehr fortgeführt werden kann bzw. soll
+\end{itemize}
+
+Nach dem Abbruch sollten eventuelle Reste vom Druckbett entfernt werden, bevor mit der Maschine weiter gearbeitet werden kann. Nach dem Nutzen des Abbruch-Knopfes verbleiben Drucker und OctoPrint Interface im Ruhezustand, man kann dementsprechend danach einen weiteren Druck starten, ohne die Maschine neu starten zu müssen.
+
+\paragraph{Hinweis:} Die Abort-Funktion des OctoPrint Webinterface stoppt nur das Senden von Befehlen an den Drucker selbst! Dies bedeutet, dass dieser alle "`gepufferten"' Bewegungen vorher zu Ende führt, bevor er an hält, was mitunter einige Sekunden dauern kann! Sollte ein sofortiges Ausschalten notwendig sein, ist es \emph{nötig und unumgänglich}, dass der Drucker einfach vom Netz getrennt wird. Dies verursacht keinen Schaden an Elektronik selbst, funktioniert jedoch sofortig und zuverlässig.

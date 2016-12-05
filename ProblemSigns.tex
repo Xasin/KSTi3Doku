@@ -15,3 +15,10 @@ Im Laufe längerer oder komplexerer Drucke kann es vorkommen dass der Druck ab e
 Normalerweise sollte dieser Fehler kein zweites mal auftreten, der Druck kann dementsprechend neu gestartet werden um es erneut zu versuchen.
 
 Sollte jedoch dieses Problem mehrfach auftreten sollte der Drucker abgeschaltet und Personal benachrichtigt werden, um ein eventuelles mechanisches oder technisches Problem beheben zu können.
+
+\subsubsection{Motoren drehen nicht, machen laute Geräusche oder gar nichts}
+
+Dies ist ein mögliches Anzeichen für defekte Schrittmotortreiber. Diese können durch Kurzschlüsse, statische Aufladung oder Spannungsspitzen beschädigt werden, und können dementsprechend den Motor nur noch teilweise oder gar nicht mehr steuern.
+
+Es ist empfehlenswert die Maschine \emph{sofort} aus zu schalten, da ein defekter Schrittmotortreiber teilweise intern kurzgeschlossen sein könnte, und dies andere Elemente gefährdet! Es sollte der defekte Treiber umgehend durch ein ähnliches, pin-kompatibles Modell ersetzt werden, bevor der Drucker erneut in Betrieb genommen werden kann!
+Geeignet sind hierfür: Pololu/Allegro A4988, Trinamic TMC2100 (SilentStepStick), Texas Instruments DRV8825
