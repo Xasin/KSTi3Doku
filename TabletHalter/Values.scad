@@ -16,9 +16,9 @@ standTubeConnectorHeight = 23;
 standConnectorHeight = 150;
 standConnectorStabiliserScrewNum = 2;
 
-standConnectorClipWidth = 50;
+standConnectorClipWidth = 30;
 standConnectorClipSmoothing = 6;
-standConnectorClipLength = 20;
+standConnectorClipLength = 30;
 standConnectorClipInShift = 0.1;
 
 // Größen des eigentlichen Standfußes
